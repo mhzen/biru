@@ -13,4 +13,4 @@ mkdir /nix
 echo "import \"/usr/share/biru/biru.just\"" >>/usr/share/ublue-os/justfile
 
 # Default flatpaks
-cat /usr/share/biru/system_flatpaks.list >>/usr/etc/ublue-os/system_flatpaks.list
+cat /usr/share/biru/system_flatpaks.list >>/usr/etc/ublue-os/system-flatpaks.list
