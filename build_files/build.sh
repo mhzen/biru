@@ -11,6 +11,3 @@ mkdir /nix
 
 # Ujust
 echo "import \"/usr/share/biru/biru.just\"" >>/usr/share/ublue-os/justfile
-
-# Default flatpaks
-cat /usr/share/biru/system_flatpaks.list >>/etc/ublue-os/system-flatpaks.list
