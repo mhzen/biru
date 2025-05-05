@@ -1,3 +1,4 @@
 it.mijorus.gearlever
 org.localsend.localsend_app
 menu.kando.Kando
+com.github.d4nj1.tlpui

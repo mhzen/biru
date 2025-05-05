@@ -5,7 +5,8 @@
 Bunch of opinionated and personal changes over Bluefin-dx:
 
 - Based on stable tag of Bluefin-dx
-- Add Ulauncher
+- Add Albert
+- Replace tuned (+ tuned-ppd) with tlp (+ tlp-drw)
 - DoT enabled by default (Adguard and Cloudflare)
 - Add ujust command to install Nix
 - Fix Nix support in F42+
