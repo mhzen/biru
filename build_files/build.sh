@@ -6,7 +6,13 @@ set -ouex pipefail
 dnf5 config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:manuelschneid3r/Fedora_"$(rpm -E %fedora)"/home:manuelschneid3r.repo
 
 # Install packages
-dnf5 install -y albert
+dnf5 install -y albert tlp tlp-rdw
+
+# Remove packages
+dnf5 remove -y tuned tuned-ppd
+
+# Enable services
+systemctl enable tlp
 
 # Fix nix on F42+
 mkdir /nix
