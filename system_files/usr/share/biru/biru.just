@@ -9,7 +9,7 @@ setup-nix:
   curl --proto '=https' --tlsv1.2 -sSf -L "$NIX_INSTALLER" | sh -s -- install --no-confirm
   echo "Nix setup complete."
 
-# Setup Nix OpenGL system packages
+# Setup Nix OpenGL system packages (can also be used to update)
 setup-nix-opengl:
   #!/usr/bin/env bash
   set -euo pipefail
@@ -30,6 +30,9 @@ setup-nix-opengl:
   sudo rm -f "$OPENGL_SYMLINK_CONF"
   printf "L+ /run/opengl-driver - - - - %s\nL+ /run/opengl-driver-32 - - - - %s\n" "$OPENGL_PROFILE" "$OPENGL_PROFILE_32" | sudo tee "$OPENGL_SYMLINK_CONF"
   sudo systemd-tmpfiles --create "$OPENGL_SYMLINK_CONF"
+
+  echo "Cleaning garbage files"
+  sudo -i nix-collect-garbage -d
 
   echo "Nix OpenGL installation complete."
 
