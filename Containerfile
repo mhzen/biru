@@ -1,7 +1,7 @@
 FROM scratch AS ctx
 COPY build_files /
 
-FROM ghcr.io/ublue-os/silverblue-main:42 as biru
+FROM ghcr.io/ublue-os/bluefin-dx:42 as biru
 COPY system_files /
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
