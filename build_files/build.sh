@@ -8,8 +8,7 @@ dnf5 config-manager addrepo --from-repofile=https://download.opensuse.org/reposi
 # Install packages
 dnf5 install -y \
   albert \
-  tlp tlp-rdw \
-  gnome-shell-extension-pop-shell
+  tlp tlp-rdw
 
 # Remove packages
 dnf5 remove -y \
