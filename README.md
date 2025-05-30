@@ -5,7 +5,7 @@
 Bunch of opinionated and personal changes over Bluefin-dx:
 
 - Based on stable tag of Bluefin-dx
-- Add Albert
+- Add Albert, pop-shell
 - Replace tuned (+ tuned-ppd) with tlp (+ tlp-drw)
 - DoT enabled by default (Adguard and Cloudflare)
 - Add ujust command to install Nix
