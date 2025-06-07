@@ -2,23 +2,20 @@
 
 set -ouex pipefail
 
-### Install packages
+# dnf 
+dnf5 install -y tlp ghostty
+dnf5 remove -y tuned tuned-ppd
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
+# nix fix
+mkdir /nix
 
-# this installs a package from fedora repos
-dnf5 install -y tmux 
+# just recipes
+echo "import \"/usr/share/biru/biru.just\"" >>/usr/share/ublue-os/justfile
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
-
-#### Example for enabling a System Unit File
-
-systemctl enable podman.socket
+# cleanup
+dnf5 clean all -y
+rm -rf /tmp/*
+find /var/* -maxdepth 0 -type d \! -name cache -exec rm -fr {} \;
+find /var/cache/* -maxdepth 0 -type d \! -name libdnf5 \! -name rpm-ostree -exec rm -fr {} \;
+mkdir -p /var/tmp
+chmod -R 1777 /var/tmp
