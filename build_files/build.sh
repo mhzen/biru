@@ -3,8 +3,11 @@
 set -ouex pipefail
 
 # dnf 
-dnf5 install -y tlp ghostty
+dnf5 install -y tlp
 dnf5 remove -y tuned tuned-ppd
+
+# systemd
+systemctl enable tlp
 
 # nix fix
 mkdir /nix
