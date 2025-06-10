@@ -8,6 +8,7 @@ dnf5 config-manager addrepo -y --from-repofile=https://download.opensuse.org/rep
 # dnf 
 dnf5 install -y tlp
 dnf5 install -y albert
+dnf5 install -y waydroid
 dnf5 remove -y tuned tuned-ppd
 
 # disable repo
