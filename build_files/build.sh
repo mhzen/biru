@@ -2,9 +2,16 @@
 
 set -ouex pipefail
 
+# add repository
+dnf5 config-manager addrepo -y --from-repofile=https://download.opensuse.org/repositories/home:manuelschneid3r/Fedora_42/home:manuelschneid3r.repo
+
 # dnf 
 dnf5 install -y tlp
+dnf5 install -y albert
 dnf5 remove -y tuned tuned-ppd
+
+# disable repo
+sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/home:manuelschneid3r.repo
 
 # systemd
 systemctl enable tlp
