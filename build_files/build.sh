@@ -4,7 +4,7 @@ set -ouex pipefail
 
 # add repository
 dnf5 config-manager addrepo -y --from-repofile=https://download.opensuse.org/repositories/home:manuelschneid3r/Fedora_42/home:manuelschneid3r.repo
-dnf5 config-manager addrepo -y --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+# dnf5 config-manager addrepo -y --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 copr enable -y alternateved/keyd
 
 # enable /opt
@@ -13,7 +13,6 @@ mkdir -p /var/opt
 # dnf
 dnf5 install -y tlp \
                 albert \
-                brave-browser \
                 keyd
 dnf5 remove -y tuned tuned-ppd
 
