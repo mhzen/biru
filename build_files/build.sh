@@ -2,6 +2,9 @@
 
 set -ouex pipefail
 
+# install package
+dnf5 install -y keyd fish
+
 # nix fix
 mkdir /nix
 
