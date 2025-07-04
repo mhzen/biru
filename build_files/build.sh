@@ -2,6 +2,9 @@
 
 set -ouex pipefail
 
+# enable repo
+dnf5 copr enable -y alternateved/keyd
+
 # install package
 dnf5 install -y keyd fish
 
