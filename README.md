@@ -14,7 +14,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/mhzen/biru:latest
 ```
 2. Rebase to the signed image and reboot
 ```
-rpm-ostree rebase ostree-image-signed:ghcr.io/mhzen/biru:latest
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mhzen/biru:latest
 ```
 
 # Documentation
