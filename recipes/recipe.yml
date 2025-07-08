@@ -15,10 +15,11 @@ modules:
       copr:
         - alternateved/keyd
       cleanup: true
-    packages:
-      - keyd
-      - albert
-      - fish
+    install:
+      packages:
+        - keyd
+        - albert
+        - fish
 
   - type: fonts
     fonts:
