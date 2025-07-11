@@ -22,6 +22,7 @@ modules:
         - albert
         - fish
         - nautilus-open-any-terminal
+        - podman-docker
 
   - type: fonts
     fonts:
