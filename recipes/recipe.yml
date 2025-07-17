@@ -15,6 +15,7 @@ modules:
       copr:
         - alternateved/keyd
         - monkeygold/nautilus-open-any-terminal
+        - scottames/ghostty
       cleanup: true
     install:
       packages:
@@ -23,6 +24,7 @@ modules:
         - fish
         - nautilus-open-any-terminal
         - podman-docker
+        - ghostty
 
   - type: fonts
     fonts:
