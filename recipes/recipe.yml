@@ -25,7 +25,6 @@ modules:
         - nautilus-open-any-terminal
         - podman-docker
         - ghostty
-        - papirus-icon-theme
 
   - type: fonts
     fonts:
