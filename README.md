@@ -14,7 +14,7 @@ systemctl reboot
 ```
 - Then rebase to the signed image, like so:
 ```
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/blue-build/template:latest
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mhzen/biru:latest
 ```
 - Reboot again to complete the installation
 ```
